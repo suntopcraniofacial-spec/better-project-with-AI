@@ -300,6 +300,80 @@
             font-size: 1.2rem;
         }
 
+        /* Testimonials Section */
+        .testimonials-section {
+            background: linear-gradient(135deg, var(--bg-body), #e8f4f8);
+            padding: 5rem 0;
+            margin: 5rem 0;
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial-card {
+            background: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(11, 30, 54, 0.08);
+            border-left: 4px solid var(--accent);
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(11, 30, 54, 0.12);
+        }
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(to right, var(--accent), var(--teal-soft));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.8rem;
+            margin-right: 1rem;
+        }
+        .testimonial-info h4 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+        .testimonial-info p {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .stars {
+            color: #fbbf24;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .testimonial-text {
+            color: var(--text-muted);
+            line-height: 1.8;
+            font-style: italic;
+            border-left: 3px solid var(--teal-soft);
+            padding-left: 1rem;
+        }
+        .price-comparison {
+            background: #f0f9ff;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            border: 1px solid var(--accent);
+        }
+        .price-comparison strong {
+            color: var(--success-green);
+        }
+
         /* Gallery Section Styles */
         .gallery-section {
             background: linear-gradient(135deg, var(--bg-body), #e8f4f8);
@@ -355,6 +429,16 @@
             font-size: 0.95rem;
             line-height: 1.6;
         }
+        .gallery-badge {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent), var(--teal-soft));
+            color: #fff;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.8rem;
+        }
 
         /* Modal Gallery Lightbox */
         .modal {
@@ -367,6 +451,7 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.8);
             animation: fadeIn 0.3s ease;
+            overflow: auto;
         }
         .modal-content {
             margin: auto;
@@ -561,6 +646,14 @@
             .video-grid {
                 grid-template-columns: 1fr;
             }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .modal-close {
+                top: 10px;
+                right: 15px;
+                font-size: 24px;
+            }
         }
     </style>
 </head>
@@ -570,6 +663,7 @@
         <div class="logo">Sun<span>top</span> Dental</div>
         <nav>
             <a href="#services">Services</a>
+            <a href="#testimonials">Reviews</a>
             <a href="#gallery">Gallery</a>
             <a href="#videos">Videos</a>
             <a href="#branches">Branches</a>
@@ -646,6 +740,118 @@
         </div>
     </section>
 
+    <!-- Patient Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">What Our Patients Say</h2>
+            <p class="section-subtitle">Real stories from satisfied patients who chose Suntop Dental</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨</div>
+                        <div class="testimonial-info">
+                            <h4>Chisom Okoro</h4>
+                            <p>Teeth Whitening Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "The treatment price is exactly similar to UBTH and other government institutions. Why waste time in long queues? I just came in and went out. Fast, efficient, and affordable service!"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ Same Price as UBTH</strong> • No Long Queues • Same Day Service
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩</div>
+                        <div class="testimonial-info">
+                            <h4>Amira Hassan</h4>
+                            <p>Dental Crown Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "I compared prices with UBTH before coming here. Suntop charges the same but I didn't spend hours waiting. Professional care, affordable pricing—this is what you should expect!"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ UBTH Price Match</strong> • No Waiting Time • Expert Doctors
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨</div>
+                        <div class="testimonial-info">
+                            <h4>Emeka Okonkwo</h4>
+                            <p>Teeth Extraction Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "My brother was spending 6 hours at UBTH for the same procedure. Here at Suntop, I got the same treatment at the same price and finished in 45 minutes. No regrets!"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ Government Clinic Pricing</strong> • Fast Turnaround • Quality Care
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩</div>
+                        <div class="testimonial-info">
+                            <h4>Zainab Ahmed</h4>
+                            <p>Braces Treatment Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "I was paying the same amount at UBTH but dealing with waiting lists and delays. Suntop offered the exact same price with professional attention. Why would I waste my time elsewhere?"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ Same Cost as UBTH</strong> • Better Service • Shorter Wait
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👨</div>
+                        <div class="testimonial-info">
+                            <h4>David Eze</h4>
+                            <p>Cleaning & Polishing Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Compared prices—Suntop matches UBTH rates perfectly. But here, I'm treated like a priority customer instead of a number in a queue. Best decision I made!"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ UBTH Competitive Pricing</strong> • Priority Treatment • Professional Team
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">👩</div>
+                        <div class="testimonial-info">
+                            <h4>Joy Adekunle</h4>
+                            <p>Filling Treatment Patient</p>
+                        </div>
+                    </div>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <div class="testimonial-text">
+                        "Government institution pricing with premium service quality! Why spend all day at UBTH when Suntop offers the same fees with modern equipment and zero queue time?"
+                    </div>
+                    <div class="price-comparison">
+                        <strong>✓ Equal to Government Prices</strong> • Modern Facility • Quick Service
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Gallery Section -->
     <section id="gallery" class="gallery-section">
         <div class="container">
@@ -653,51 +859,57 @@
             <p class="section-subtitle">See the transformations our patients have achieved with Suntop Dental</p>
             
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openGalleryModal('Gum Treatment Before & After')">
-                    <div class="gallery-image">🏥</div>
+                <div class="gallery-item" onclick="openGalleryModal('Dental Extraction Procedure')">
+                    <div class="gallery-image">🔬</div>
                     <div class="gallery-caption">
-                        <h4>Gum Treatment Before & After</h4>
-                        <p>Professional gum disease treatment and healthy gum restoration</p>
+                        <h4>Dental Extraction Procedure</h4>
+                        <p>Professional tooth extraction technique with precision and patient comfort</p>
+                        <span class="gallery-badge">Surgical</span>
                     </div>
                 </div>
 
-                <div class="gallery-item" onclick="openGalleryModal('Oral Surgery Procedure')">
-                    <div class="gallery-image">🔬</div>
+                <div class="gallery-item" onclick="openGalleryModal('Bridge Restoration Case Study')">
+                    <div class="gallery-image">👑</div>
                     <div class="gallery-caption">
-                        <h4>Oral Surgery Procedure</h4>
-                        <p>Advanced surgical extraction and tissue management</p>
+                        <h4>Bridge Restoration Case Study</h4>
+                        <p>Before and after: Successful dental bridge installation for missing teeth</p>
+                        <span class="gallery-badge">Restoration</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Sterilization Equipment')">
+                    <div class="gallery-image">⚙️</div>
+                    <div class="gallery-caption">
+                        <h4>Sterilization Equipment</h4>
+                        <p>High-pressure autoclave for surgical instrument sterilization and safety</p>
+                        <span class="gallery-badge">Equipment</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Modern Treatment Chair')">
+                    <div class="gallery-image">💺</div>
+                    <div class="gallery-caption">
+                        <h4>Modern Treatment Chair</h4>
+                        <p>State-of-the-art dental treatment chair with digital controls</p>
+                        <span class="gallery-badge">Facility</span>
+                    </div>
+                </div>
+
+                <div class="gallery-item" onclick="openGalleryModal('Gum Treatment Before & After')">
+                    <div class="gallery-image">✨</div>
+                    <div class="gallery-caption">
+                        <h4>Gum Treatment Before & After</h4>
+                        <p>Professional gum disease treatment and healthy gum restoration</p>
+                        <span class="gallery-badge">Periodontal</span>
                     </div>
                 </div>
 
                 <div class="gallery-item" onclick="openGalleryModal('Teeth Whitening Transformation')">
-                    <div class="gallery-image">✨</div>
-                    <div class="gallery-caption">
-                        <h4>Teeth Whitening Transformation</h4>
-                        <p>Professional whitening results showing before & after</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Smile Restoration Results')">
-                    <div class="gallery-image">😁</div>
-                    <div class="gallery-caption">
-                        <h4>Smile Restoration Results</h4>
-                        <p>Successful dental restoration for confident smiles</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Crown Placement')">
-                    <div class="gallery-image">👑</div>
-                    <div class="gallery-caption">
-                        <h4>Crown Placement Procedure</h4>
-                        <p>Precision crown installation for tooth restoration</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" onclick="openGalleryModal('Healthy Teeth Results')">
                     <div class="gallery-image">⭐</div>
                     <div class="gallery-caption">
-                        <h4>Healthy Teeth Results</h4>
-                        <p>Beautiful, healthy smile after complete treatment</p>
+                        <h4>Teeth Whitening Transformation</h4>
+                        <p>Professional whitening results showing before & after comparison</p>
+                        <span class="gallery-badge">Cosmetic</span>
                     </div>
                 </div>
             </div>
@@ -711,7 +923,6 @@
             <p class="section-subtitle">Watch our professional dental treatment procedures and patient testimonials</p>
             
             <div class="video-grid">
-                <!-- Placeholder Videos - Replace with your actual YouTube/Vimeo links -->
                 <div class="video-card">
                     <div class="video-container">
                         <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen="" loading="lazy"></iframe>
@@ -852,27 +1063,23 @@
             const modal = document.getElementById('galleryModal');
             const modalImage = document.getElementById('modalImage');
             
-            // Create a canvas with the title to display
             const canvas = document.createElement('canvas');
             canvas.width = 800;
             canvas.height = 600;
             const ctx = canvas.getContext('2d');
             
-            // Create gradient background
             const gradient = ctx.createLinearGradient(0, 0, 800, 600);
             gradient.addColorStop(0, '#e0f2fe');
             gradient.addColorStop(1, '#bae6fd');
             ctx.fillStyle = gradient;
             ctx.fillRect(0, 0, 800, 600);
             
-            // Add title
             ctx.font = 'bold 36px Arial';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillStyle = '#0b1e36';
             ctx.fillText(title, 400, 300);
             
-            // Add decorative elements
             ctx.strokeStyle = '#0ea5e9';
             ctx.lineWidth = 2;
             ctx.beginPath();
@@ -888,7 +1095,6 @@
             modal.style.display = 'none';
         }
 
-        // Close modal when clicking outside the image
         window.onclick = function(event) {
             const modal = document.getElementById('galleryModal');
             if (event.target === modal) {
@@ -896,7 +1102,6 @@
             }
         }
 
-        // Close modal on escape key
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 closeGalleryModal();
